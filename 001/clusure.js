@@ -1,3 +1,4 @@
+
 /* ¿que es un clousure ? 
   Una clausura o closures es una funcion que guarda referencias del estado adyacente (ámbito léxico).
   -una clusura permite acceder al ámbito de una función exterior desde una función interior 
@@ -50,7 +51,8 @@ console.log(contador());
 /* *********************************************************************************************************************** */
 
 console.log("-----------------------------------------------------------------------------------------")
-console.log("Ejemplo 3 EMULANDO METODOS PRIVADOS")
+console.log("EMULANDO METODOS PRIVADOS")
+console.log("Ejemplo1")
 
 /* EJEMPLO 3 EMULANDO MÉTODOS PRIVADOS */
 /* 
@@ -92,3 +94,91 @@ console.log(counter.value()); // 2
 
 counter.decrement();
 console.log(counter.value()); // 1
+
+/* *********************************************************************************************************************** */
+
+console.log("-----------------------------------------------------------------------------------------")
+console.log("Ejemplo 4")
+
+const makeCounter = function () {
+  let privateCounter = 0;
+  function changeBy(val) {
+    privateCounter += val;
+  }
+  return {
+    increment() {
+      changeBy(1);
+    },
+    decrement() {
+      changeBy(-1)
+    },
+    value() {
+      return privateCounter;
+    },
+  };
+};
+
+const counter1 = makeCounter();
+const counter2 = makeCounter();
+
+console.log(counter1.value()); // 0
+
+counter1.increment();
+counter1.increment();
+console.log(counter1.value()); //
+
+counter1.decrement();
+console.log(counter1.value()); // 1
+console.log(counter2.value()); //0
+
+/* *********************************************************************************************************************** */
+
+console.log("-----------------------------------------------------------------------------------------")
+console.log("CADENA DE ALCANCE DEL CLOSURE")
+console.log("Ejemplo1")
+
+// EJEMPLO 1 
+/*
+  Un error comín es no darse cuenta de que en el caso de que la función externa sea a su vez una función anidada, 
+  el acceseo al ámbito de la función externa incluye el ámbito de la función externa, creando asi una cadena de ámbitos de finciones 
+  Para demostarlo así una cadena de ámbitos de funciones. para demostarlo esta el siguiente ejemplo: 
+*/
+
+// Ambito global 
+const e = 10;
+
+function sum(a) {
+  return function (b) {
+    return function (c) {
+      // ámbito de funciones externas
+      return function (d) {
+        // ámbito local 
+        return a + b + c + d + e;
+      };
+    };
+  };
+}
+
+console.log(sum(1)(2)(3)(4)); // 20 -> cada uno de los parametros que se proporcionan, se asigna a cada funcion anidada en sum ***
+
+console.log("-----------------------------------------------------------------------------------------")
+console.log("Ejemplo2")
+
+// Tambien sin funciones anonimas  
+
+const sum2 = sum(1);
+const sum3 = sum2(2);
+const sum4 = sum3(3);
+const result = sum4(4);
+
+console.log(result);
+
+// /* *********************************************************************************************************************** */
+// console.log("Ejemplo 3 closures sobre modulos ");
+
+// import { getX, setX } from "./mymodule.js";
+
+
+// console.log(getX()); // 5 
+// setX(6);
+// console.log(getX()); //6 

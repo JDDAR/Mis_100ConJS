@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400;600&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+.container {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  padding-top: 50px;
+}
+.cuenta {
+  padding: 35px;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px -1px #73737388;
+  color: lightcoral;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 600;
+}
+#resultado {
+  font-size: 2rem;;
+}
