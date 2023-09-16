@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap');
+
+
+$dark-gray : #888888;
+$light-bg : #f7f7f7;
+$light-gray : #c3c3c3;
+$color-black: #3f3844;
+$color-white: #f7f7f7;
+$color-yellow : #f7ce68;
+$color-orange : #ff7f50;
+
+/* Fonts */
+$family-fonts : Work Sans, sans-serif;
+
+
+// Gradients -->
+
+@mixin gradient-JS {
+background-color: #fbbb9b;
+background-image: linear-gradient(113deg, #fbbb9b 0%, #F7CE68 39%);
+
+
+}
+
+// function
+
+@function set-color-text($color) { 
+  @if(lightness($color) > 40%){
+    @return #000;
+  }@else{
+    @return $color-white;
+  }
+}

@@ -1,0 +1,111 @@
+.body-004 {
+  //background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  width: 100%;
+  height: 100vh;
+} 
+.content004{ 
+  width: 60%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+
+  &__card{
+    width: 80%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px 2px rgba(0,0,0, 0.2);
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  }
+  &__search{
+    height: 10%;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    input{
+      padding: 15px;
+      width: 100%;
+      border-radius: 50px;
+      border: none;
+      z-index: 0;
+    }
+    button{ 
+      position: absolute;
+      height: 35px;
+      width: 35px;
+      background-color: #a18cd1;
+      border-radius: 50%;
+      font-size: 1em;
+      border: none;
+      right: 42px;
+      z-index: 2;
+      cursor: pointer;
+      color: #f2f2f2;
+    }
+  }
+  &__weather{ 
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+    color: rgba(255, 255, 255, 0.8);
+
+    i {
+      font-size: 8em;
+      margin-bottom: 25px;
+    }
+    h1{  
+      font-size: 2em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    h2 {
+      font-weight: 400;
+      margin-bottom: 25px;
+    }
+
+  }
+  &__weather--detils{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+  }
+  &__weather-col{ 
+    display: flex;
+    justify-items: center;
+    gap: 15px;
+    i {
+      font-size: 3em;
+    }
+    .wind,
+    .humidity{ 
+      font-size: 2em;
+      font-weight: 600;
+      span{ 
+        font-size: 1em;
+        font-weight: 400;
+      }
+    }
+  }
+}
+@media (max-width: 560px){
+  .body-004{ 
+    height: 100vh;
+  }
+  .content004{
+    width: 90%;
+    &__card{ 
+      height: 90vh;
+    }
+  } 
+}

@@ -1,0 +1,8 @@
+@use 'variables' as var;
+@use 'format';
+@use 'index';
+@use 'headerGeneral'; 
+body { 
+  background: var.$light-gray;
+  font-family: var.$family-fonts;
+}
