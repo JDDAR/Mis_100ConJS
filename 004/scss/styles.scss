@@ -1,16 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap");
+
 .body-004 {
   //background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  background: #a18cd1;
   width: 100%;
-  height: 100vh;
+  height: auto;
+  font-family: Work Sans, sans-serif ;
 } 
 .content004{ 
-  width: 60%;
+  width: 40%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 25px;
-
   &__card{
     width: 80%;
     height: auto;
@@ -52,17 +54,16 @@
   }
   &__weather{ 
     width: 100%;
-    height: 50%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 35px;
     color: rgba(255, 255, 255, 0.8);
 
     i {
       font-size: 8em;
-      margin-bottom: 25px;
+
     }
     h1{  
       font-size: 2em;
@@ -70,25 +71,24 @@
     }
     h2 {
       font-weight: 400;
-      margin-bottom: 25px;
     }
 
   }
   &__weather--detils{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
-    gap: 35px;
+
   }
   &__weather-col{ 
     display: flex;
     justify-items: center;
-    gap: 15px;
     i {
       font-size: 3em;
     }
     .wind,
     .humidity{ 
+      line-height: 1em;
       font-size: 2em;
       font-weight: 600;
       span{ 
@@ -98,14 +98,49 @@
     }
   }
 }
+
+@media (max-width: 1280px){
+  .content004{
+    width: 50%;
+  } 
+}
+
+@media( max-width: 800px){ 
+  .content004{  
+    width: 80%;
+  } 
+}  
+
 @media (max-width: 560px){
   .body-004{ 
-    height: 100vh;
+    height: auto;
   }
   .content004{
     width: 90%;
+    &__search{ 
+      padding: 15px;
+      button{ 
+        right: 20px;
+      } 
+    } 
     &__card{ 
-      height: 90vh;
+      height: auto;
     }
+    &__weather{
+      i {
+        font-size: 5em;
+        margin-bottom: 25px
+      }
+    }
+    &__weather-col{ 
+      i{ 
+        font-size: 2em;
+      }
+      .wind,
+      .humidity{ 
+        font-size: .8em;
+      } 
+
+    } 
   } 
 }

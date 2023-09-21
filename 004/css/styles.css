@@ -1,15 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap");
 .body-004 {
+  background: #a18cd1;
   width: 100%;
-  height: 100vh;
+  height: auto;
+  font-family: Work Sans, sans-serif;
 }
 
 .content004 {
-  width: 60%;
+  width: 40%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 25px;
 }
 .content004__card {
   width: 80%;
@@ -52,17 +54,15 @@
 }
 .content004__weather {
   width: 100%;
-  height: 50%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 35px;
   color: rgba(255, 255, 255, 0.8);
 }
 .content004__weather i {
   font-size: 8em;
-  margin-bottom: 25px;
 }
 .content004__weather h1 {
   font-size: 2em;
@@ -70,24 +70,22 @@
 }
 .content004__weather h2 {
   font-weight: 400;
-  margin-bottom: 25px;
 }
 .content004__weather--detils {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
-  gap: 35px;
 }
 .content004__weather-col {
   display: flex;
   justify-items: center;
-  gap: 15px;
 }
 .content004__weather-col i {
   font-size: 3em;
 }
 .content004__weather-col .wind,
 .content004__weather-col .humidity {
+  line-height: 1em;
   font-size: 2em;
   font-weight: 600;
 }
@@ -97,15 +95,42 @@
   font-weight: 400;
 }
 
+@media (max-width: 1280px) {
+  .content004 {
+    width: 50%;
+  }
+}
+@media (max-width: 800px) {
+  .content004 {
+    width: 80%;
+  }
+}
 @media (max-width: 560px) {
   .body-004 {
-    height: 100vh;
+    height: auto;
   }
   .content004 {
     width: 90%;
   }
+  .content004__search {
+    padding: 15px;
+  }
+  .content004__search button {
+    right: 20px;
+  }
   .content004__card {
-    height: 90vh;
+    height: auto;
+  }
+  .content004__weather i {
+    font-size: 5em;
+    margin-bottom: 25px;
+  }
+  .content004__weather-col i {
+    font-size: 2em;
+  }
+  .content004__weather-col .wind,
+  .content004__weather-col .humidity {
+    font-size: 0.8em;
   }
 }
 
