@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/headeGeneral.css">
+  </head>
+
+  <body>
+    <header>
+      <section class="headerGeneral">
+        <div class="headerGeneral__buttons">
+          <span>Mas De </span>
+          <a href="../index.html"><i class="fa-solid fa-caret-left"></i>Inicio</a>
+          <a href="https://github.com/JDDAR/CSS/tree/main/002"> <i class="fa-brands fa-github-alt"></i>CSS</a>
+        </div>
+        <div class="headerGeneral__social">
+          <a href="../index.html"><i class="fa-solid fa-caret-left"></i></a>
+          <a href="https://github.com/JDDAR/CSS/tree/main/002"> <i class="fa-brands fa-github-alt"></i></a>
+        </div>
+      </section>
+    </header>
+    <section class="container">
+
+        <section class="wrapper">
+          <div class="option">
+            <div class="option__wrapper">
+              <section class="slider">
+                <label for="width__range">Grid Width</label>
+
+                <input type="range" id="width__range" min="1" max="54">
+                <span id="width__value">00</span>
+              </section>
+              <section class="slider">
+                <label for="height__range">Grid height</label>
+                <input type="range" id="height__range" min="1" max="40">
+                <span id="height__value">00</span>
+              </section>
+            </div>
+
+            <div class="option__wrapper">
+              <button id="submit__grid">Create Grid</button>
+              <button id="clear__grid">Clear Grid</button>
+              <input type="color" id="color__input">
+              <button id="erase__btn">Erase</button>
+              <button id="paint__btn">Paint</button>
+
+            </div>
+          </div>
+          <div class="lienzo"></div>
+        </section>
+    </section>
+    <script src="js/app.js"></script>
+  </body>
+</html>
