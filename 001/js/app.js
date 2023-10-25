@@ -10,28 +10,6 @@ let valueWidth = document.getElementById("width__value");
 let valueHeight = document.getElementById("height__value");
 
 
-/* INPUT RAGE ****************+++*/
-
-if (gridWidth) {
-  let windowSelect = parseInt(window.getComputedStyle(gridWidth, null).getPropertyValue('width'));
-
-  let etiqueta = document.querySelector(".etiqueta");
-  if(etiqueta){ 
-    etiqueta.innerHTML = gridWidth.value;
-
-    let positionInit = windowSelect / 100
-
-    etiqueta.style.left =(( gridWidth.value * positionInit) - 15 ) + 'px';
-
-    gridWidth.addEventListener(' input', function(){ 
-      etiqueta.innerHTML = gridWidth.value;
-      etiqueta.style.left =( ( gridWidth.value * positionInit) -15 )  + 'px'; 
-    }, false)
-  }  
-
-}
-
-
 let events = { 
   mouse:{ 
     down:"mousedown",

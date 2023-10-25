@@ -2,7 +2,51 @@
 @use 'format';
 @use 'index';
 @use 'headerGeneral'; 
-body { 
-  background: var.$light-gray;
-  font-family: var.$family-fonts;
+
+/*BGG */
+
+.bg {
+  background-color: var.$color-black-bg;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+
+  &__cuadricula {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+    background: var.$color-black-bg;
+    filter: saturate(2);
+  }
+
+  .colorBox {
+    z-index: 2;
+    filter: brightness(1.1);
+    transition: 1s ease;
+    position: relative;
+    margin: 1px;
+    background: var.$color-black-bg;
+  }
+
+  .colorBox:hover {
+    background: var.$color-yellow-js;
+    transition: 0s;
+  }
+
+  .bgAdmin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: var.$color-yellow-js;
+    filter: blur(60px);
+    animation: scannerBox 6s linear infinite;
+  }
 }
